@@ -109,3 +109,93 @@ control-families:
               - id: main_branch_min_approvals
                 description: Minimum approvals on the default branch
                 default: 1
+
+  - title: Legal
+    description: |
+      Legal focuses on the policies and procedures
+      that govern the project's licensing and 
+      intellectual property. These controls help ensure 
+      that the project's source code is distributed under 
+      a recognized and legally enforceable open source 
+      software license, reducing the risk of intellectual 
+      property disputes or licensing violations.
+    controls:
+      - id: OSPS-LE-02
+        title: |
+          All licenses for the project MUST meet the OSI Open Source Definition
+          or the FSF Free Software Definition.
+        objective: |
+          Ensure that the project's source code is distributed under a recognized
+          and legally enforceable open source software license, providing clarity on 
+          how the code can be used and shared by others.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: B-B-6
+              - reference-id: B-B-7
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2b
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.3.2
+          - reference-id: CSF
+            entries:
+              - reference-id: GV.OC-03
+          - reference-id: Scorecard
+            entries:
+              - reference-id: License
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: G1.2
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 3.2.1
+          - reference-id: 800-161
+            entries:
+              - reference-id: PL-4
+        assessment-requirements:
+          - id: OSPS-LE-02.01
+            text: |
+              While active, the license for the source code MUST meet the OSI Open 
+              Source Definition or the FSF Free Software Definition.
+            applicability:
+              - Maturity Level 1
+              - Maturity Level 2
+              - Maturity Level 3
+            recommendation: |
+              Add a LICENSE file to the project's repo with a license that is an
+              approved license by the Open Source Initiative (OSI), or a free 
+              license as approved by the Free Software Foundation (FSF). Examples of 
+              such licenses include the MIT, BSD 2-clause, BSD 3-clause revised, 
+              Apache 2.0, Lesser GNU General Public License (LGPL), and the GNU 
+              General Public License (GPL). Releasing to the public domain meets 
+              this control if there are no other encumbrances such as patents.
+            recommended-parameters:
+              - id:
+                description:
+                default:
+          - id: OSPS-LE-02.02
+            text: |
+              While active, the license for the released software assets MUST meet 
+              the OSI Open Source Definition or the FSF Free Software Definition.
+            applicability:
+              - Maturity Level 1
+              - Maturity Level 2
+              - Maturity Level 3
+            recommendation: |
+              If a different license is included with released software assets, 
+              ensure it is an approved license by the Open Source Initiative (OSI), 
+              or a free license as approved by the Free Software Foundation (FSF). 
+              Examples of such licenses include the MIT, BSD 2-clause, BSD 3-clause 
+              revised, Apache 2.0, Lesser GNU General Public License (LGPL), and the 
+              GNU General Public License (GPL). Note that the license for the 
+              released software assets may be different than the source code.
+            recommended-parameters:
+              - id: license_for_released_software_assets
+                description: License requirements for released software assets.
+                default: Apache 2.0
+
+
+
+
