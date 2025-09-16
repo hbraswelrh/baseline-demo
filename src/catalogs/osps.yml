@@ -172,9 +172,9 @@ control-families:
               General Public License (GPL). Releasing to the public domain meets 
               this control if there are no other encumbrances such as patents.
             recommended-parameters:
-              - id:
-                description:
-                default:
+              - id: license_for_released_software_assets
+                description: License requirements for released software assets.
+                default: Apache 2.0
           - id: OSPS-LE-02.02
             text: |
               While active, the license for the released software assets MUST meet 
